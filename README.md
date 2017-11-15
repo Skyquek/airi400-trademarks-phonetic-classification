@@ -1,4 +1,4 @@
-# trademark-phonetic-similarity(상표 칭호 유사도 계산)
+# trademark-phonetic-similarity(상표 칭호 유사 판단)
 
 ## 문제 정의 및 목표
 출원상표가 선출원상표와 동일 또는 유사하고 지정 상품이 동일 또는 유사한 경우 해당 출원상표는 특허청 심사관에 의하여 거절된다. 
