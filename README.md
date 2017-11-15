@@ -33,6 +33,7 @@ sample_trademark_data.csv 파일은 실행을 위한 샘플 데이터입니다.
 3. 두 단어쌍의 결과값을 심사관의 판단에 기초하여 지도학습을 수행한다.
 
 - 예시
+
 ![hana VIP vs hana golf](https://github.com/pyobro/airi400-trademarks-phonetic-classification/blob/master/data/image_merge/HANA%20VIP.Hanagolf.0.png)
 
 위의 예시는 hana vip 와 hana golf의 칭호적인 특징을 이용하여 hana vip는 RGB채널의 R채널, hana golf는 B채널에 배치하여 만든 이미지이다. 
