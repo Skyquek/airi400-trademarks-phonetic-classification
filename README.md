@@ -47,14 +47,32 @@ validation accuracy 기준으로 약 90% 정확도를 달성하였다.
 5번째 상표 결과를 제외하고 모두 정답을 예측하였다. 
 
 | Adam | epoch: 001 | loss: 0.29621 - acc: 0.8691 | val_loss: 0.32331 - val_acc: 0.8613 -- iter: 22560/22560
+
+
 | Adam | epoch: 002 | loss: 0.26400 - acc: 0.8919 | val_loss: 0.66627 - val_acc: 0.7628 -- iter: 22560/22560
+
+
 | Adam | epoch: 003 | loss: 0.21131 - acc: 0.9152 | val_loss: 0.23522 - val_acc: 0.9043 -- iter: 22560/22560
+
+
 | Adam | epoch: 004 | loss: 0.17665 - acc: 0.9300 | val_loss: 0.24968 - val_acc: 0.9043 -- iter: 22560/22560
+
+
 | Adam | epoch: 005 | loss: 0.13552 - acc: 0.9459 | val_loss: 0.37089 - val_acc: 0.8479 -- iter: 22560/22560
+
+
 | Adam | epoch: 006 | loss: 0.13026 - acc: 0.9486 | val_loss: 0.34793 - val_acc: 0.8830 -- iter: 22560/22560
+
+
 | Adam | epoch: 007 | loss: 0.11382 - acc: 0.9679 | val_loss: 0.24277 - val_acc: 0.9092 -- iter: 22560/22560
+
+
 | Adam | epoch: 008 | loss: 0.08500 - acc: 0.9735 | val_loss: 0.30742 - val_acc: 0.8936 -- iter: 22560/22560
+
+
 | Adam | epoch: 009 | loss: 0.08363 - acc: 0.9760 | val_loss: 0.27712 - val_acc: 0.9117 -- iter: 22560/22560
+
+
 | Adam | epoch: 010 | loss: 0.05866 - acc: 0.9860 | val_loss: 0.31002 - val_acc: 0.9096 -- iter: 22560/22560
 
 ## 한계와 개선점
