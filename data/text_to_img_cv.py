@@ -12,7 +12,7 @@ phone_dict = {"-": 16, "a": 19, "e": 21, "i": 23, "o": 25, "u": 27, "h": 30, "b"
 
 
 # 텍스트를 이미지로 변환
-def textpair_to_image(title1, title2):
+def textpair_to_array(title1, title2, similarity=0):
     word_list1 = []
     word_list2 = []
     title1_roman = romanize(title1).lower()
@@ -66,7 +66,7 @@ def textpair_to_image(title1, title2):
         img1 = cv2.line(img, (x1[i], y1[i]), (x1[i + 1], y1[i + 1]), (255. / (i + 1)), max(2, int(1000 / length_line1)))
 
     for j in range(NPOINTS2 - 2):
-        img2 = cv2.line(img, (x2[i], y2[i]), (x2[i + 1], y2[i + 1]), (255. / (i + 1)), max(2, int(1000 / length_line2)))
+        img2 = cv2.line(img, (x2[j], y2[j]), (x2[j + 1], y2[j + 1]), (255. / (j + 1)), max(2, int(1000 / length_line2)))
 
     img1 = img1 / 255.
     img2 = img2 / 255.
@@ -79,7 +79,3 @@ def textpair_to_image(title1, title2):
     # cv2.destroyAllWindows()
 
     return img
-
-
-img = textpair_to_image("헬로우", "마이네임이즈표브")
-print(img)
