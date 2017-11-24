@@ -31,10 +31,16 @@ def textpair_to_array(title1, title2, similarity=0):
     y2 = []
 
     for a in title1_roman_wo_space:
-        word_list1.append(phone_dict[a])
+        try:
+            word_list1.append(phone_dict[a])
+        except Exception as e:
+            print(e)
 
     for b in title2_roman_wo_space:
-        word_list2.append(phone_dict[b])
+        try:
+            word_list2.append(phone_dict[b])
+        except Exception as e:
+            print(e)
 
     for i in range(len(word_list1) - 1):
         x1_, y1_ = word_list1[i], word_list1[i + 1]
@@ -60,6 +66,9 @@ def textpair_to_array(title1, title2, similarity=0):
     # print(length_line1, length_line2)
 
     img = np.zeros([96, 96], dtype=np.float64)
+    img1 = np.zeros([96, 96], dtype=np.float64)
+    img2 = np.zeros([96, 96], dtype=np.float64)
+
     # img3 = np.zeros([96, 96], dtype=np.float64)
 
     for i in range(NPOINTS1 - 2):
