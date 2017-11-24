@@ -1,4 +1,5 @@
 import re
+
 import cv2
 import numpy as np
 
@@ -62,11 +63,13 @@ def textpair_to_image(title1, title2):
     # img3 = np.zeros([96, 96], dtype=np.float64)
 
     for i in range(NPOINTS1 - 2):
-        img1 = cv2.line(img, (x1[i], y1[i]), (x1[i + 1], y1[i + 1]), (255, 255, 255), max(2, int(1000 / length_line1)))
+        img1 = cv2.line(img, (x1[i], y1[i]), (x1[i + 1], y1[i + 1]), (255. / (i + 1)), max(2, int(1000 / length_line1)))
 
     for j in range(NPOINTS2 - 2):
-        img2 = cv2.line(img, (x2[i], y2[i]), (x2[i + 1], y2[i + 1]), (255, 255, 255), max(2, int(1000 / length_line2)))
+        img2 = cv2.line(img, (x2[i], y2[i]), (x2[i + 1], y2[i + 1]), (255. / (i + 1)), max(2, int(1000 / length_line2)))
 
+    img1 = img1 / 255.
+    img2 = img2 / 255.
     img = np.dstack((img1, img2))
 
     # 직접 확인하고 싶을 경우 img3=0 을 포함하여 확인
