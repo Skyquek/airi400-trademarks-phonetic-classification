@@ -72,10 +72,13 @@ def textpair_to_array(title1, title2, similarity=0):
     # img3 = np.zeros([96, 96], dtype=np.float64)
 
     for i in range(NPOINTS1 - 2):
-        img1 = cv2.line(img, (x1[i], y1[i]), (x1[i + 1], y1[i + 1]), (255. / (i + 1)), max(2, int(1000 / length_line1)))
+        img1 = cv2.line(img, (x1[i], y1[i]), (x1[i + 1], y1[i + 1]), (255. / (i + 1)), min(10, max(2, int(2000 / length_line1))))
 
     for j in range(NPOINTS2 - 2):
-        img2 = cv2.line(img, (x2[j], y2[j]), (x2[j + 1], y2[j + 1]), (255. / (j + 1)), max(2, int(1000 / length_line2)))
+        img2 = cv2.line(img, (x2[j], y2[j]), (x2[j + 1], y2[j + 1]), (255. / (j + 1)), min(10, max(2, int(2000 / length_line2))))
+
+    print(length_line1, length_line2)
+
 
     img1 = img1 / 255.
     img2 = img2 / 255.
@@ -88,3 +91,5 @@ def textpair_to_array(title1, title2, similarity=0):
     # cv2.destroyAllWindows()
 
     return img
+
+textpair_to_array("헬로우", "미미미미아리아리")
